@@ -5,6 +5,7 @@ import shutil
 import os
 import yaml
 
+
 def install_library():
     command = "git clone https://github.com/ultralytics/JSON2YOLO.git"
     result = subprocess.run(command, shell=True, capture_output=True, text=True)
@@ -47,7 +48,7 @@ def prepare_labels(data_dir='/kaggle/input/livecell'):
     convert_coco_json(data_dir, use_segments=True)
 
 
-def create_yaml(path, train, val, test, names, output_dir): # '/kaggle/working/new_dir/dataset.yaml'
+def create_yaml(path, train, val, test, names, output_dir):
     d = {
         "path": path, #
         "train": train, #

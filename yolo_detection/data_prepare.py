@@ -35,15 +35,6 @@ def clean_coco_json(json_path, images_dir, output_path):
 
 
 def convert_coco_to_yolo(coco_annotation_file, output_label_dir, categories, target_img_size=None):
-    """
-    Convert COCO annotations to YOLO format.
-
-    Parameters:
-    - coco_annotation_file: Path to COCO annotations JSON file
-    - output_label_dir: Directory to save YOLO formatted labels
-    - categories: List of categories to include
-    - target_img_size: Tuple (width, height) to resize the images, default is None (no resize)
-    """
 
     with open(coco_annotation_file) as f:
         coco_data = json.load(f)
